@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Leko/hygiene/issues"
   },
-  "homepage": "https://github.com/Leko/hygiene#readme"
+  "homepage": "https://github.com/Leko/hygiene#readme",
+  "devDependencies": {
+    "prettier": "^1.15.3"
+  }
 }
