@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Leko/hygiene#readme",
   "devDependencies": {
+    "lerna": "^3.7.1",
     "prettier": "^1.15.3"
   }
 }
