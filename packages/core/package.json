@@ -1,0 +1,25 @@
+{
+  "name": "@hygiene/core",
+  "version": "0.0.1",
+  "description": "WIP",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leko/hygiene.git"
+  },
+  "keywords": [
+    "hygiene",
+    "todo",
+    "fixme",
+    "comment"
+  ],
+  "author": "Leko <leko.noor@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Leko/hygiene/issues"
+  },
+  "homepage": "https://github.com/Leko/hygiene#readme"
+}
