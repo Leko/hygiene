@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "WIP",
   "main": "index.js",
+  "bin": {
+    "hygiene": "./dist/index"
+  },
   "scripts": {
     "prepare": "npm run build",
     "build": "npm-run-all build:*",
