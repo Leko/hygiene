@@ -22,13 +22,12 @@ export default (): Plugin<Option, Annotation> => ({
     const slugs = issues.map(
       issue => `${issue.owner}/${issue.repo}#${issue.number}`
     );
-    const glue = issues.length <= 1 ? "was" : "were";
     const message =
       issues.length <= 2
         ? slugs.join(", ")
         : `${slugs.slice(0, -1).join(", ")} and ${slugs[slugs.length - 1]}`;
 
-    return `${message} ${glue} already closed`;
+    return `${message} has been closed`;
   },
 
   getConfigDefinition() {
