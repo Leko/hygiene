@@ -1,17 +1,18 @@
 import { AnnotatedComment } from "./AnnotatedComment";
 
-export interface ConfigDefinition {
-  [name: string]: {
+export type ConfigDefinition<C> = {
+  [name in keyof C]: {
     describe: string;
-    type: string; // FIXME: enum
+    type: "string" | "number" | "boolean" | "array" | "count" | undefined;
     default: any; // FIXME
-  };
-}
+    [x: string]: any;
+  }
+};
 
 export interface Plugin<Config, Annotation> {
   name: string;
 
-  toMessage(annotation: Annotation, option: Option): string;
+  toMessage(annotation: Annotation, config: Config): string;
 
   isMine(annotation: Annotation, config: Config): annotation is Annotation;
 
@@ -25,5 +26,5 @@ export interface Plugin<Config, Annotation> {
    */
   parse(body: string, config: Config): Promise<Annotation | null>;
 
-  getConfigDefinition(): ConfigDefinition;
+  getConfigDefinition(): ConfigDefinition<Config>;
 }

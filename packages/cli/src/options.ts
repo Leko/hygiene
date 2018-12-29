@@ -1,16 +1,10 @@
 import mapValues from "lodash/mapValues";
 import yargs from "yargs";
-import { BodyParser, Plugin } from "@hygiene/core";
 import { sync as findUp } from "find-up";
+import { Plugin } from "@hygiene/core";
 import { run } from "./command/run";
 
-export const createCommand = <T>({
-  bodyParser,
-  plugins
-}: {
-  bodyParser: BodyParser<T>;
-  plugins: Plugin<any, any>[];
-}) => {
+export const createCommand = ({ plugins }: { plugins: Plugin<any, any>[] }) => {
   const cmd = yargs
     .scriptName("hygiene")
     .option("json", {
@@ -37,7 +31,7 @@ export const createCommand = <T>({
       command: "run [glob]",
       describe: "",
       // @ts-ignore Type 'Argv<{}>' is missing the following properties from type 'Options': _, json, ignorePath
-      handler: run({ bodyParser, plugins }),
+      handler: run({ plugins }),
       builder: yargs => yargs.default("glob", "**/*")
     })
     .demandCommand()

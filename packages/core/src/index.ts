@@ -1,6 +1,5 @@
 export { AnnotatedComment } from "./AnnotatedComment";
 export { Plugin } from "./Plugin";
-export { BodyParser } from "./BodyParser";
 export { Resolver } from "./Resolver";
 export { combineParsers } from "./combineParsers";
 export { filterExpired } from "./filterExpired";

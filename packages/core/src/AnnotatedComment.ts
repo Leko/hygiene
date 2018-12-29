@@ -20,4 +20,9 @@ export type AnnotatedComment<Annotation> = {
    * The body of annotated comment
    */
   text: string;
+
+  /**
+   * @see https://babeljs.io/docs/en/next/babel-code-frame.html
+   */
+  codeFrame: string;
 };

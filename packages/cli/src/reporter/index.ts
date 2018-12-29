@@ -5,13 +5,19 @@ import { json as jsonReporter } from "./json";
 
 const wrapReporter = (r: Reporter): ReportWrapper => (
   comments: AnnotatedComment<never>[],
-  plugins: Plugin<any>[],
+  plugins: Plugin<any, any>[],
   pluginSettings: any[]
 ) => {
   return r(
     comments.map(comment => {
       const { annotation, ...other } = comment;
-      const plugin = plugins.find(plugin => plugin.isMine(annotation));
+      const plugin = plugins.find((plugin, i) => {
+        const pluginSetting = pluginSettings[i];
+        return plugin.isMine(annotation, pluginSetting);
+      });
+      if (!plugin) {
+        throw new Error("Cannot resolve any plugin");
+      }
       const pluginSetting = pluginSettings[plugins.indexOf(plugin)];
       const message = plugin.toMessage(annotation, pluginSetting);
 

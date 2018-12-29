@@ -2,14 +2,14 @@ import { readFile } from "fs";
 import path from "path";
 import { promisify } from "util";
 import { AnnotatedComment } from "./AnnotatedComment";
-import { BodyParser } from "./BodyParser";
+import { Plugin } from "./Plugin";
 import { parseText } from "./parseText";
 
 const readFileAsync = promisify(readFile);
 
 export async function parseFile<T>(
   file: string,
-  bodyParser: BodyParser<T>
+  bodyParser: Plugin<any, any>["parse"]
 ): Promise<AnnotatedComment<T>[]> {
   return parseText<T>(
     await readFileAsync(file, "utf8"),

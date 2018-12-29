@@ -1,9 +1,8 @@
-import { AnnotatedComment } from "@hygiene/core";
-import { Reporter } from "./Reporter";
+import { Reporter, ReportMessage } from "./Reporter";
 
-export const stringify = (comment: AnnotatedComment<never>): string =>
+export const stringify = (comment: ReportMessage): string =>
   JSON.stringify(comment);
 
-export const json: Reporter = async (comments: AnnotatedComment<never>[]) => {
+export const json: Reporter = async comments => {
   comments.map(stringify).forEach(msg => console.log(msg));
 };

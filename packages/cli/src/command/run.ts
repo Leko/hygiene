@@ -4,7 +4,12 @@ import { relative } from "path";
 import ignore from "ignore";
 import pick from "lodash/pick";
 import flow from "lodash/flow";
-import { parseFiles, filterExpired, Plugin, BodyParser } from "@hygiene/core";
+import {
+  combineParsers,
+  parseFiles,
+  filterExpired,
+  Plugin
+} from "@hygiene/core";
 import * as reporters from "../reporter";
 
 export interface Options {
@@ -58,15 +63,12 @@ export const createFilter = async ({
   );
 };
 
-export const run = <T>({
-  bodyParser,
-  plugins
-}: {
-  bodyParser: BodyParser<T>;
-  plugins: Plugin<any, any>[];
-}) => async (argv: Options) => {
+export const run = ({ plugins }: { plugins: Plugin<any, any>[] }) => async (
+  argv: Options
+) => {
   const { glob, json, ignore, ignorePattern, ignorePath } = argv;
 
+  const bodyParser = combineParsers(...plugins);
   const report = json ? reporters.json : reporters.text;
   const filter = ignore
     ? await createFilter({
