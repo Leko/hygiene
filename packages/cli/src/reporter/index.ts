@@ -4,7 +4,7 @@ import { text as textReporter } from "./text";
 import { json as jsonReporter } from "./json";
 
 const wrapReporter = (r: Reporter): ReportWrapper => (
-  comments: AnnotatedComment<never>[],
+  comments: AnnotatedComment<any>[],
   plugins: Plugin<any, any>[],
   pluginSettings: any[]
 ) => {

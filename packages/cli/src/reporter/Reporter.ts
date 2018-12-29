@@ -15,8 +15,8 @@ export interface Reporter {
 
 export interface ReportWrapper {
   (
-    comments: AnnotatedComment[],
-    plugins: Plugin<any>[],
+    comments: AnnotatedComment<any>[],
+    plugins: Plugin<any, any>[],
     pluginSettings: any[]
   ): Promise<void>;
 }
