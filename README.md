@@ -19,19 +19,19 @@ https://github.com/pgilad/leasot#supported-languages
 ## Install
 
 ```
-npm install -g hygiene
+npm install -g @hygiene/cli
 ```
 
 Or you can use hygiene with `npx` without `npx install`.
 
 ```
-npx hygiene
+npx @hygiene/cli
 ```
 
 ## Usage
 
 ```
-$ npx hygiene --help
+$ npx @hygiene/cli --help
 hygiene <command>
 
 Commands:
