@@ -5,6 +5,8 @@
 ![](https://img.shields.io/npm/dm/hygiene.svg)
 ![](https://img.shields.io/npm/l/hygiene.svg)
 
+![Screenshot](https://user-images.githubusercontent.com/1424963/50548318-d087e600-0c8d-11e9-8fa1-4803b844ff3a.png)
+
 Keep your TODOs and FIXMEs healthy
 
 - :sparkles: Supports any language
