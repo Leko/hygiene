@@ -14,8 +14,10 @@ interface Option {
 
 const parseReferences = parser("github");
 
+export { TYPE };
+
 export default (): Plugin<Option, Annotation> => ({
-  name: "github-url",
+  name: TYPE,
 
   toMessage(annotation: Annotation): string {
     const { issues } = annotation;
