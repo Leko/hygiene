@@ -37,10 +37,20 @@ export const createCommand = ({ plugins }: { plugins: Plugin<any, any>[] }) => {
       // @ts-ignore Type 'Argv<{}>' is missing the following properties from type 'Options': _, json, ignorePath
       handler: run({ plugins }),
       builder: yargs =>
-        yargs.positional("glob", {
-          describe: "Pattern of target files",
-          default: "**/*"
-        })
+        yargs
+          .positional("glob", {
+            describe: "Pattern of target files",
+            default: "**/*"
+          })
+          .example("$0 run --no-ignore", "Disable ignore feature")
+          .example(
+            "$0 run --repository Leko/hygiene",
+            "Parse non-prefixed issue(ex. #123) as Leko/hygiene"
+          )
+          .example(
+            "GITHUB_TOKEN=xxx $0 run --no-ignore",
+            "Set GitHub access token to fetch issue or pull request"
+          )
     })
     .demandCommand()
     .help();
