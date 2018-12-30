@@ -31,8 +31,8 @@
   },
   "homepage": "https://github.com/Leko/hygiene#readme",
   "dependencies": {
-    "@hygiene/core": "*",
-    "@hygiene/plugin-github-url": "*",
+    "@hygiene/core": "^0.0.1",
+    "@hygiene/plugin-github-url": "^0.0.1",
     "find-up": "^3.0.0",
     "ignore": "^5.0.4",
     "yargs": "^12.0.5"
