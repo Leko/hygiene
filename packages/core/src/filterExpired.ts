@@ -3,8 +3,8 @@ import { Plugin } from "./Plugin";
 
 export async function filterExpired<A>(
   comments: AnnotatedComment<A>[],
-  plugins: Plugin<any, A>[], // FIXME
-  pluginConfigs: any[] // FIXME
+  plugins: Pick<Plugin<any, A>, "isMine" | "isResolved">[],
+  pluginConfigs: any[]
 ): Promise<AnnotatedComment<A>[]> {
   const expires: AnnotatedComment<A>[] = [];
 

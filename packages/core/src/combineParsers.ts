@@ -1,7 +1,7 @@
 import { Plugin } from "./Plugin";
 
 export function combineParsers(
-  ...plugins: { parse: Plugin<any, any>["parse"] }[]
+  ...plugins: Pick<Plugin<any, any>, "parse">[]
 ): Plugin<any, any>["parse"] {
   return async function parse(body: string, config: any) {
     for (let plugin of plugins) {
