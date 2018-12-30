@@ -5,7 +5,7 @@
 ![](https://img.shields.io/npm/dm/@hygiene/cli.svg)
 ![](https://img.shields.io/npm/l/@hygiene/cli.svg)
 
-![Screenshot](https://user-images.githubusercontent.com/1424963/50548318-d087e600-0c8d-11e9-8fa1-4803b844ff3a.png)
+<img width="397" alt="screen shot 2018-12-31 at 00 24 57" src="https://user-images.githubusercontent.com/1424963/50548570-9a993080-0c92-11e9-866d-88e2b697bae0.png">
 
 Keep your TODOs and FIXMEs healthy
 
