@@ -1,0 +1,12 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "package.json",
+        "packages/cli/package.json",
+        "packages/core/package.json",
+        "packages/plugin-github-url/package.json"
+      ]
+    }
+  }
+}
