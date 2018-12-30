@@ -1,7 +1,7 @@
 {
   "name": "@hygiene/plugin-github-url",
   "version": "0.0.1",
-  "description": "WIP",
+  "description": "Keep your TODOs and FIXMEs healthy",
   "main": "dist/index.js",
   "scripts": {
     "prepare": "npm run build",
