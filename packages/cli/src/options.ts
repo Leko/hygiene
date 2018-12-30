@@ -53,6 +53,9 @@ export const createCommand = ({ plugins }: { plugins: Plugin<any, any>[] }) => {
           )
     })
     .demandCommand()
+    .epilogue(
+      "For more information, find our manual at https://github.com/Leko/hygiene"
+    )
     .help();
 
   plugins.forEach(plugin => {
