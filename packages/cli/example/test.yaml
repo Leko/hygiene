@@ -1,0 +1,4 @@
+config:
+  # FIXME: https://github.com/Leko/hygiene/pull/1
+  some_work_around:
+    - run: hoge foo bar
