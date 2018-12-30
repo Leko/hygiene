@@ -1,6 +1,6 @@
 # hygiene
 
-[![CircleCI](https://circleci.com/gh/Leko/hygiene.svg?style=svg)](https://circleci.com/gh/Leko/hygiene) [![Greenkeeper badge](https://badges.greenkeeper.io/Leko/hygiene.svg)](https://greenkeeper.io/)
+[![CircleCI](https://circleci.com/gh/Leko/hygiene.svg?style=svg)](https://circleci.com/gh/Leko/hygiene)
 ![](https://img.shields.io/npm/v/hygiene.svg)
 ![](https://img.shields.io/npm/dm/hygiene.svg)
 ![](https://img.shields.io/npm/l/hygiene.svg)
