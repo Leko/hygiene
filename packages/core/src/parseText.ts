@@ -21,7 +21,8 @@ export function parseText<T>(
     .parse(content, {
       extension,
       filename,
-      withInlineFiles: true
+      // FIXME: https://github.com/pgilad/leasot/pull/109
+      withInlineFiles: false
     })
     .map(
       async (todoComment): Promise<AnnotatedComment<T>> => ({
