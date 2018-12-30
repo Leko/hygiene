@@ -1,7 +1,10 @@
 import * as leasot from "leasot";
+import _debug from "debug";
 import { codeFrameColumns } from "@babel/code-frame";
 import { AnnotatedComment } from "./AnnotatedComment";
 import { Plugin } from "./Plugin";
+
+const debug = _debug("hygiene/core");
 
 export function parseText<T>(
   content: string,
@@ -10,6 +13,7 @@ export function parseText<T>(
   bodyParser: Plugin<any, any>["parse"]
 ): Promise<AnnotatedComment<T>[]> {
   if (!leasot.isExtensionSupported(extension)) {
+    debug(`${extension} is not supported yet`);
     return Promise.resolve([]);
   }
 
