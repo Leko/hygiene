@@ -1,6 +1,6 @@
 {
   "name": "@hygiene/plugin-github-url",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publishConfig": {
     "access": "public"
   },
@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/Leko/hygiene#readme",
   "dependencies": {
-    "@hygiene/core": "^0.0.1",
+    "@hygiene/core": "^0.0.2",
     "@octokit/rest": "^16.3.0",
     "bottleneck": "^2.15.0",
     "find-up": "^3.0.0",
