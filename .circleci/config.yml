@@ -19,7 +19,8 @@ jobs:
             - v{{ .Environment.CIRCLECI_CACHE_VERSION }}-dependencies-{{ checksum "package-lock.json" }}
             - v{{ .Environment.CIRCLECI_CACHE_VERSION }}-dependencies-
       - run: npm install
-      - run: $(npm bin)/lerna bootstrap
+      # https://github.com/npm/npm/issues/19479
+      - run: $(npm bin)/lerna bootstrap -- --unsafe-perm
       - save_cache:
           paths:
             - node_modules
