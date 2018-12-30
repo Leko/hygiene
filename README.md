@@ -1,13 +1,13 @@
 # hygiene
 
 [![CircleCI](https://circleci.com/gh/Leko/hygiene.svg?style=svg)](https://circleci.com/gh/Leko/hygiene)
-![](https://img.shields.io/npm/v/hygiene.svg)
-![](https://img.shields.io/npm/dm/hygiene.svg)
-![](https://img.shields.io/npm/l/hygiene.svg)
+![](https://img.shields.io/npm/v/@hygiene/cli.svg)
+![](https://img.shields.io/npm/dm/@hygiene/cli.svg)
+![](https://img.shields.io/npm/l/@hygiene/cli.svg)
+
+![Screenshot](https://user-images.githubusercontent.com/1424963/50548318-d087e600-0c8d-11e9-8fa1-4803b844ff3a.png)
 
 Keep your TODOs and FIXMEs healthy
-
-- :sparkles: Supports any language
 
 ## Supported languages
 
