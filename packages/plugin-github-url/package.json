@@ -49,7 +49,7 @@
     "@types/node": "^10.12.18",
     "@types/remote-origin-url": "^2.0.0",
     "npm-run-all": "^4.1.5",
-    "upbin": "^0.8.1"
+    "upbin": "^0.9.0"
   },
   "gitHead": "bb49239872425c6090377e4308c74667bd745883"
 }
