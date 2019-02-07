@@ -31,7 +31,7 @@
   "homepage": "https://github.com/Leko/hygiene#readme",
   "devDependencies": {
     "@types/babel__code-frame": "^7.0.0",
-    "@types/debug": "^0.0.31",
+    "@types/debug": "^4.1.0",
     "@types/glob": "^7.1.1",
     "@types/lodash": "^4.14.119",
     "dotenv-cli": "^1.4.0",
