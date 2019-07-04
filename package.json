@@ -4,7 +4,9 @@
   "description": "Keep your TODOs and FIXMEs healthy",
   "main": "index.js",
   "scripts": {
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -29,5 +31,9 @@
     "prettier": "^1.15.3",
     "ts-jest": "^24.0.0",
     "typescript": "^3.2.2"
+  },
+  "snyk": true,
+  "dependencies": {
+    "snyk": "^1.192.0"
   }
 }
